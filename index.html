@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!--PyScript CSS  -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <title>Tarefas do ET</title>
+    <link rel="icon" type="image/png" href="./assets/logo.png" />
+
+    <style>
+        .line-through {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="app-header">
+            <a href="/">
+                <img src="./assets/logo.png" class="logo" />
+            </a>
+            <a class="title" href="" style="color: #f0ab3c">Tarefas do ET</a>
+        </div>
+    </nav>
+
+    <section class="pyscript">
+        <main>
+            <section>
+                <div>
+                    <h1>Criação de Tarefas</h1>
+                </div>
+                <div class="task-creation">
+                    <input id="new-task-content" type="text" />
+                    <button id="new-task-btn" type="submit" py-click="add_task">
+                        Criar Tarefa
+                    </button>
+                    <select name="Prioridade" id="new-task-priority">
+                        <option value="task-priority-high">Alta</option>
+                        <option value="task-priority-medium">Média</option>
+                        <option value="task-priority-low">Baixa</option>
+                    </select>
+
+                </div>
+
+                <div id="list-tasks-container"></div>
+
+                <template id="task-template">
+                    <section class="task py-li-element">
+                        <p class="task-title"></p>
+                        <div class="task-content">
+                            <p class="task-createdAt"></p>
+                        </div>
+                        <div class="task-priority"></div>
+                        <input type="checkbox" />
+                    </section>
+                </template>
+            </section>
+        </main>
+
+        <script type="py" src="./main.py" config="./pyscript.toml"></script>
+    </section>
+
+</body>
+
+</html>

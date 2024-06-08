@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+}
+.navbar{
+    background-color: #0038FF;
+}
+.task.py-li-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* Espaço entre os itens */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.priority-box{
+    width: 10px;
+    margin-right: 10px; /* Largura da div de cor */
+    height: 20px; /* Altura da div de cor */
+    color: red; /* Cor de exemplo */
+}
+
+.task-title {
+    flex-grow: 1; /* Ocupará o espaço restante */
+    margin: 0; /* Remove a margem padrão */
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-left: 10px;
+
+}
+.spacing{
+    width: 20px;
+    height: 10px;
+    background-color: #0038FF;
+}
+
+.high{
+    color:#0038FF
+}
+
+.task-priority-high { 
+    width: 10px;
+    color: red; }
+.task-priority-medium { color: yellow; }
+.task-priority-low { color: green; }
