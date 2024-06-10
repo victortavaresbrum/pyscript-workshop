@@ -27,7 +27,7 @@
             <a href="/">
                 <img src="./assets/logo.png" class="logo" />
             </a>
-            <a class="title" href="" style="color: #f0ab3c">Tarefas do ET</a>
+            <a class="title" href="" >Tarefas do ET</a>
         </div>
     </nav>
 
@@ -35,14 +35,14 @@
         <main>
             <section>
                 <div>
-                    <h1>Criação de Tarefas</h1>
+                    <h1 id="title-task-creation">Criação de Tarefas</h1>
                 </div>
                 <div class="task-creation">
                     <input id="new-task-content" type="text" />
-                    <button id="new-task-btn" type="submit" py-click="add_task">
+                    <button id="new-task-btn"  class = "glow-on-hover" type="submit" py-click="add_task">
                         Criar Tarefa
                     </button>
-                    <select name="Prioridade" id="new-task-priority">
+                    <select name="Prioridade" id="new-task-priority" class ="select-style">
                         <option value="task-priority-high">Alta</option>
                         <option value="task-priority-medium">Média</option>
                         <option value="task-priority-low">Baixa</option>
@@ -51,7 +51,6 @@
                 </div>
 
                 <div id="list-tasks-container"></div>
-
                 <template id="task-template">
                     <section class="task py-li-element">
                         <p class="task-title"></p>
